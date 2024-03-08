@@ -1,30 +1,23 @@
-import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { selectError, selectIsLoading } from '../redux/selectors';
-import { fetchContacts } from '../redux/operations';
+import React, { lazy } from 'react';
+import { Routes, Route, Navigate } from 'react-router-dom';
+import SharedLayout from 'pages/SharedLayout/SharedLayout';
 
-import Section from './Section/Section.jsx';
-import ContactList from './ContactList/ContactList.jsx';
-import ContactForm from './ContactForm/ContactForm.jsx';
-import Filter from './Filter/Filter.jsx';
+const Home = lazy(() => import('pages/Home/Home'));
+const Contacts = lazy(() => import('pages/Contacts/Contacts'));
+const Login = lazy(() => import('pages/Login/Login'));
+const Register = lazy(() => import('pages/Register/Register'));
 
 const App = () => {
-  const dispatch = useDispatch();
-  const isLoading = useSelector(selectIsLoading);
-  const error = useSelector(selectError);
-
-  useEffect(() => {
-    dispatch(fetchContacts());
-  }, [dispatch]);
   return (
-    <Section title="Phonebook">
-      <ContactForm />
-      <ContactList>
-        {isLoading && !error && <b>Request in progress...</b>}
-        <Filter />
-      </ContactList>
-      
-    </Section>
+    <Routes>
+      <Route path="/" element={<SharedLayout />}>
+        <Route index element={<Home />} />
+        <Route path="/contacts" element={<Contacts />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="*" element={<Navigate to="/" />} />
+      </Route>
+    </Routes>
   );
 };
 export default App;
