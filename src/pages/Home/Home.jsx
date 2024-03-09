@@ -1,5 +1,10 @@
+import { HomeHeader, HomeWrapper, HomeText } from './Home.styled';
 const Home = () => {
-    return <div><h1>
-    </h1></div>;
+  return (
+    <HomeWrapper>
+      <HomeHeader>Phonebook!</HomeHeader>
+      <HomeText>All your contacts in one place</HomeText>
+    </HomeWrapper>
+  );
 };
 export default Home;

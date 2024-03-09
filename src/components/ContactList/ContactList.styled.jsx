@@ -6,6 +6,7 @@ export const ContactsTitle = styled.h2`
 `;
 export const ContactsList = styled.ul`
   margin: 0, auto;
+  margin-bottom: 100px;
 `;
 export const ContactElement = styled.li`
   flex-wrap: nowrap;
