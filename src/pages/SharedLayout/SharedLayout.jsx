@@ -12,6 +12,7 @@ const SharedLayout = () => {
       <Suspense fallback={<Loader />}>
         <Outlet />
       </Suspense>
+      <footer> GOIT homework by <a href='' target='_blank'>Magdalena Kuśmierczak</a></footer>
     </Container>
   );
 };
