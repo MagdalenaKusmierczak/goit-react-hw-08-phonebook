@@ -2,14 +2,15 @@ import styled from 'styled-components';
 
 export const Form = styled.form`
   width: 400px;
-  height: 300px;
+  height: 400px;
   margin-block: 20px;
-  padding: 15px;
+  padding-top: 40px;
   display: flex;
-  gap: 30px;
-  align-items: center;
+  gap: 20px;
   flex-direction: column;
+  align-items: center;
   border: 2px black solid;
+  align-items: center;
 `;
 export const Label = styled.label`
   display: flex;
@@ -34,10 +35,10 @@ export const SubButton = styled.button`
   height: 30px;
   padding: 2px;
   font-size: 20px;
-  cursor: pointer;
   background-color: #0086d4;
   border-radius: 10px;
   border: 0px;
+  cursor: pointer;
   &:hover {
     background-color: #1700d4;
     color: white;

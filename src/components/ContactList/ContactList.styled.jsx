@@ -1,15 +1,20 @@
 import styled from 'styled-components';
 
-export const ContactsWrapper = styled.div``;
+export const ContactsWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+`;
 export const ContactsTitle = styled.h2`
   font-size: 30px;
+  margin-block: 5px;
 `;
 export const ContactsList = styled.ul`
   margin: 0, auto;
   margin-bottom: 100px;
 `;
 export const ContactElement = styled.li`
-  flex-wrap: nowrap;
   font-size: 22px;
 `;
 export const DeleteBtn = styled.button`
