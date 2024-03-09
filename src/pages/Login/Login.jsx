@@ -1,5 +1,10 @@
-import LoginForm from 'LoginForm/LoginForm';
-import { LoginWrapper, LoginHeader, Redirect, RegisterLink } from './Login.styled';
+import LoginForm from 'components/LoginForm/LoginForm';
+import {
+  LoginWrapper,
+  LoginHeader,
+  Redirect,
+  RegisterLink,
+} from './Login.styled';
 
 const Login = () => {
   return (

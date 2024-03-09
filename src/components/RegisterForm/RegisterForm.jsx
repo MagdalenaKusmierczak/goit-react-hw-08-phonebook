@@ -5,6 +5,7 @@ import { Form, Label, Input, SubButton } from './RegisterForm.styled';
 
 const RegisterForm = () => {
   const dispatch = useDispatch();
+
   const handleSubmit = evt => {
     evt.preventDefault();
     const form = evt.currentTarget;
@@ -21,22 +22,22 @@ const RegisterForm = () => {
   return (
     <Form autoComplete="off" onSubmit={handleSubmit}>
       <Label>
+        Username
+        <Input
+          type="text"
+          name="name"
+          minLength={3}
+          required
+          placeholder="Select your username..."
+        />
+      </Label>
+      <Label>
         Email
         <Input
           type="email"
           name="email"
           required
           placeholder="Enter your password..."
-        />
-      </Label>
-      <Label>
-        Login
-        <Input
-          type="text"
-          name="login"
-          minLength={3}
-          required
-          placeholder="Select your login..."
         />
       </Label>
       <Label>
@@ -49,7 +50,7 @@ const RegisterForm = () => {
           placeholder="Select your password..."
         />
       </Label>
-      <SubButton type="submit">Submit</SubButton>
+      <SubButton type="submit">Register</SubButton>
     </Form>
   );
 };

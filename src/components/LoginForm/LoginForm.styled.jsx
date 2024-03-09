@@ -43,3 +43,7 @@ export const SubButton = styled.button`
     color: white;
   }
 `;
+export const Error = styled.div`
+  margin: 80px auto;
+  font-size: 25px;
+`;

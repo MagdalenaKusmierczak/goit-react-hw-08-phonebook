@@ -1,11 +1,10 @@
 import { useDispatch } from 'react-redux';
-import { logIn } from '../redux/authorization/operations';
+import { logIn } from '../../redux/authorization/operations';
 
 import { Form, Label, Input, SubButton } from './LoginForm.styled';
 
 const LoginForm = () => {
   const dispatch = useDispatch();
-
   const handleSubmit = e => {
     e.preventDefault();
     const form = e.currentTarget;
@@ -21,7 +20,7 @@ const LoginForm = () => {
   return (
     <Form onSubmit={handleSubmit} autoComplete="off">
       <Label>
-        Login
+        Email
         <Input
           type="email"
           name="email"
@@ -38,7 +37,7 @@ const LoginForm = () => {
           placeholder="Enter your password..."
         />
       </Label>
-      <SubButton type="submit">Submit</SubButton>
+      <SubButton type="submit">Log in</SubButton>
     </Form>
   );
 };
