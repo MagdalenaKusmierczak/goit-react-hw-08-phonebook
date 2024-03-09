@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux';
-import { selectIsLoggedIn } from '../../redux/authorization/selectors';
+import { selectIsLoggedIn } from '../../redux/auth/selectors';
 import UserMenu from 'components/UserMenu/UserMenu';
 
 import { NavigationWrapper, NavigationItem } from './Navigation.styled';

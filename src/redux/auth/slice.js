@@ -11,7 +11,7 @@ const initialState = {
 const authSlice = createSlice({
   name: 'auth',
   initialState,
-  extraReducers: builder => {
+  extraReducers: builder => 
     builder
       .addCase(register.fulfilled, (state, action) => {
         state.user = action.payload.user;
@@ -38,8 +38,8 @@ const authSlice = createSlice({
       })
       .addCase(refreshUser.rejected, state => {
         state.isRefreshing = false;
-      });
-  },
+      }),
+  
 });
 
 export const authReducer = authSlice.reducer;

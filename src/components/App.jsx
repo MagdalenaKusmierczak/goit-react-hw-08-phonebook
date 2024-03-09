@@ -1,8 +1,8 @@
 import React, { lazy, useEffect } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import { selectIsRefreshing } from '../redux/authorization/selectors';
-import { refreshUser } from '../redux/authorization/operations';
+import { selectIsRefreshing } from '../redux/auth/selectors';
+import { refreshUser } from '../redux/auth/operations';
 import SharedLayout from 'pages/SharedLayout/SharedLayout';
 import { PrivateRoute } from './PrivateRoute';
 import { RestrictedRoute } from './RestrictedRoute';

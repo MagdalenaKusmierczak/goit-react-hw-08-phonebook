@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { logOut } from '../../redux/authorization/operations';
-import { selectUser } from '../../redux/authorization/selectors';
+import { logOut } from '../../redux/auth/operations';
+import { selectUser } from '../../redux/auth/selectors';
 
 import { UserWrapper, UserMail, LogoutButton } from './UserMenu.styled';
 
